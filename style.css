@@ -5,10 +5,10 @@
 }
 
 :root {
-    --main-font-clr: rgb(0, 0, 0);
+    --main-font-clr: #555;
     --main-bg-clr: #F0EEF1;
     --header-bg-clr: #FFFBFB;
-    --modal-clr: rgb(180, 197, 233);
+    --modal-clr: rgb(215, 223, 240);
 }
 
 body {
@@ -59,6 +59,7 @@ header {
     height: 30px;
     border-radius: 5px;
     border: none;
+    font-size: 1.4rem;
 }
 
 .modal input:focus {
@@ -81,6 +82,7 @@ header {
 
 .modal label {
     font-size: 1.5rem;
+    color: var(--main-font-clr);
 }
 
 .modal button {
@@ -90,6 +92,8 @@ header {
     font-size: 1.5rem;
     border-radius: 10px;
     border: none;
+    color: var(--main-font-clr);
+    background-color: rgb(250, 242, 135);
 }
 
 .modal button:hover {
@@ -127,7 +131,7 @@ main span {
     margin: 0.5rem;
 }
 
-/* BUTTON */
+/* BUTTONS */
 
 .button {
     display: flex;
@@ -169,7 +173,6 @@ main span {
     width: 50%;
     font-size: 1rem;
     background-color: var(--modal-clr);
-    color: white;
     padding: 1rem;
     margin: 0 auto;
     border-radius: 10px;

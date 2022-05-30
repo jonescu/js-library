@@ -10,7 +10,7 @@ const read = document.getElementById('read')
 let myLibrary = [
   
 ];
-
+//book constructor
 function Book(author, title, pages) {
     this.author = author
     this.title = title
@@ -43,7 +43,7 @@ function displayBooks(array) {
   newCard.appendChild(removeBook)
   
   //assign button class based on whether user has read the book or not.
-  // toggle class when clicked
+  //toggle class when clicked
   const readBookBtn = document.createElement('button');
   if(read.checked) {
     readBookBtn.textContent = "Read"
@@ -64,19 +64,23 @@ function displayBooks(array) {
       readBookBtn.classList.add('button-read')
       readBookBtn.textContent = 'Read'
     }
-  })
-  
+  }) 
 }
-
 
 // Show Modal
 bookBtn.addEventListener('click', function() {
   modal.style.display = 'block'
+  author.value = ''
+  title.value = ''
+  pages.value = ''
+  read.checked = false;
 })
 
-//Hide Modal
+//Hide Modal, check if inputs are empty
 submitBtn.addEventListener('click', function() {
-  modal.style.display = 'none'
-  displayBooks(myLibrary)
-});
-
+  if(author.value == '' || title.value == '' || pages.value == '' ) {
+  } else {
+    displayBooks(myLibrary)
+    modal.style.display = 'none'
+};
+})
