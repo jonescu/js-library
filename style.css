@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font-clr: rgb(0, 0, 0);
+    --main-bg-clr: #F0EEF1;
+    --header-bg-clr: #FFFBFB;
+    --modal-clr: rgb(180, 197, 233);
+}
+
+body {
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--main-bg-clr);
+    position: relative;
+}
+
+/* HEADER */
+
+header {
+    height: 10%;
+    background-color: var(--header-bg-clr);
+    color: var(--main-font-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODAL */
+
+.modal {
+    height: 350px;
+    width: 350px;
+    background-color: var(--modal-clr);
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    margin: 0 auto;
+    top: 30%;
+}
+
+.modal > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    margin: auto;
+    height: 100%;
+    text-align: left;
+}
+
+.modal input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.modal input:focus {
+    outline: 2px solid salmon
+}
+
+.modal .read {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .read > input {
+    height: 20px;
+    width: 30%;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.modal label {
+    font-size: 1.5rem;
+}
+
+.modal button {
+    padding: 1rem 0.5rem;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.modal button:hover {
+    cursor: pointer;
+}
+
+/* MAIN */
+
+main > .container {
+    height: 100%;
+    width: 100;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--main-bg-clr);
+}
+
+main > .container > .book-card {
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 300px;
+    width: 300px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    border: 1px solid (var(--main-bg-clr));
+    background-color: #fff;
+    color: var(--main-font-clr);
+    position: relative;
+}
+
+main span {
+    display: block;
+    margin: 0.5rem;
+}
+
+/* BUTTON */
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+#book-btn {
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    color: var(--main-font-clr);
+    background-color: #fff;
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+#book-btn:hover {
+    cursor: pointer;
+}
+
+.remove-btn, .button-read, .button-notRead {
+    width: 50%;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    font-weight: bold;
+}
+
+.remove-btn, .button-read, .button-notRead:hover {
+    cursor: pointer;
+}
+
+.remove-btn {
+    width: 50%;
+    font-size: 1rem;
+    background-color: var(--modal-clr);
+    color: white;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+}
+
+.button-read, .button-notRead {
+    bottom: 30%;
+    left: 25%;
+}
+
+.button-read {
+    background-color: rgb(123, 189, 123);
+}
+
+.button-notRead {
+    background-color: salmon;
+}
