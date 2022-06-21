@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" SameSite=Lax href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <title>JS Library</title>
@@ -17,30 +18,29 @@
     <!--HEADER-->
     <header>
         <h1>JavaScript Book Library</h1>
+        <div class="add-book-container">
+            <button id='add-book'>New +</button>
+        </div>
     </header>
     <!--MAIN CONTENT-->
-    <main>
-        <div class="container">
-          <div class="modal">
-              <form action="#" method="get">
-                  <label for="author">Author</label>
-                  <input type="text" id="author" name='author'>
-                  <label for="title">Title</label>
-                  <input type="text" id="title" name='title'>
-                  <label for="pages">Pages</label>
-                  <input type="number" id="pages" name='pages'>
-                  <div class="read">
-                    <label for="read">Have you read it?</label>
-                    <input type="checkbox" id="read" name='read'>
-                  </div>
-                  <button type='button' id="submit">Submit</button>
-              </form>
-          </div>
-        </div>
-    <!--ADD BOOK BUTTON-->
-        <div class="button">
-            <button type="button" id='book-btn'>Add Book +</button>
-        </div>
-    </main>
+    <div class="library-container">
+       
+    </div>
+    <div class="form-container">
+        <form action="#" class="book-form">
+            <div class="inputs">
+              <input id="book-title" type="text" placeholder="Title"/>
+              <input id="book-author" type="text" placeholder="Author"/>
+              <input id="book-pages" type="number" min='0' placeholder="Pages"/>
+            </div>
+            <div class="buttons">
+              <select name="" id="read-selector">
+                  <option value="Read">Read</option>
+                  <option value="Not Read">Not Read</option>
+              </select>
+              <input id="confirm-add-button" type="button" value="Add to library">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
