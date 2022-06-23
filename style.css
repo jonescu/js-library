@@ -30,6 +30,7 @@ header {
     height: 80%;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .book-card {
