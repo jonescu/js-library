@@ -57,10 +57,10 @@ function createBook(){
   const newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value, readSelector.value)
 
   // Assign ID
-  if(library.books.length !== 0) {
-    newBook.id = library.books.length
-  } else {
+  if(library.books.length === 0) {
     newBook.id = 0
+  } else {
+    newBook.id = library.books.length
   }
 
   // Persist to LS
@@ -163,7 +163,7 @@ e.preventDefault()
 
 // Local Storage
 function storeBook(book){
-  let books;
+  let books
   if(localStorage.getItem('books') === null) {
     books = []
     books.push(book)
@@ -188,9 +188,11 @@ function getBooksFromStorage(){
 function deleteFromStorage(id){
     let books = JSON.parse(localStorage.getItem('books'))
     books.forEach(book => {
-        if(book.id === id){
-            books.splice(book.id, 1)
-        }
+     if(books.length === 1) {
+      books = []
+    } if(book.id === id){
+          books.splice(book.id, 1)
         localStorage.setItem('books', JSON.stringify(books))
-    })
+    }
+  })
 }
